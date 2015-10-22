@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es"><!-- InstanceBegin template="/Templates/plantillaTemas.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Curso gratuito de HTML5">
+<meta name="keywords" content="HTML, CSS, CURSO, GRATIS">
+<meta name="autor" content="Carlos Izquierdo Ferrando">
+<!-- InstanceBeginEditable name="Titulo" --><title>Curso HTML5/Introduccion</title><!-- InstanceEndEditable -->
+<link href="../styles/base.css" rel="stylesheet" type="text/css">
+
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+<script>var __adobewebfontsappname__="dreamweaver"</script>
+<script src="http://use.edgefonts.net/source-sans-pro:n4:default.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div id="envoltorio">
+<!--********************ENCABEZADO*******************************-->  
+    <header id="cabecera" >
+            <h1>Curso de HTML5</h1>
+        <!-- Barra de navegación-->    
+        <nav  id="navegador">
+        <!-- InstanceBeginEditable name="Navegacion" -->
+        <ul>
+          <li><a href="#"><img src="../images/icono-left.gif" width="32" height="32"  alt="" hidden=""/></a></li>
+          <li><a href="../index.html"><img src="../images/icono-home.gif" width="32" height="32"  alt=""/></a></li>
+          <li><a href="../01elementos/elementos.html"><img src="../images/icono-right.gif" width="32" height="32"  alt=""/></a></li>
+        </ul>
+  <!-- InstanceEndEditable -->
+        </nav>
+     </header>
+<!-- ********************SECCION PRINCIPAL************************--> 
+    <main class="principal" >
+    <!-- InstanceBeginEditable name="Articulo" -->
+      <article>
+        <h2>Introducción</h2>
+      <p>HTML&nbsp; es un lenguaje para describir páginas web mediante el marcado  de elementos. Este marcado se hace con etiquetas y que son palabras reservadas del lenguaje encerradas entre los símbolos &lt;&gt;. Se utilizan dos&nbsp;etiquetas, una de inicio y otra de fin y el contenido entre ambas es tratado por el navegador en función del significado de la etiqueta. Por ejemplo la etiqueta que indica un párrafo de texto es: <em class="code">&lt;p&gt;Esto es un párrafo&lt;/&gt;</em> como vemos la etiqueta final es como la inicial pero con una barra al principio. Un&nbsp;documento HTML muy sencillo sería:</p>
+      <p class="code">&lt;!DOCTYPE html&gt;<br>
+        &lt;html&gt;<br>
+      &nbsp;	&lt;head&gt;
+      &nbsp;	&lt;meta charset=&quot;utf-8&quot;&gt;<br>
+        &nbsp;	&nbsp;	&nbsp;	&lt;title&gt;Título de la página&lt;/title&gt;<br>
+        &nbsp;	&nbsp;&lt;/head&gt;<br>
+        &nbsp;	&nbsp;&lt;body&gt;
+        <br>
+        &nbsp;	&nbsp;	&nbsp;	&lt;h1&gt;Esto es un encabezado&lt;/h1&gt;
+        <br>
+        &nbsp;	&nbsp;	&nbsp;	&lt;p&gt;Esto es un párrafo.&lt;/p&gt;
+        <br>
+        &nbsp;	&lt;/body&gt;
+        <br>
+        &lt;/html&gt;</p>
+      <p>En este documento vemos las siguientes etiquetas:</p>
+      <table width="100%" border="0">
+        <tr>
+          <td>&lt;!DOCTYPE html&gt;</td>
+          <td>Esta etiqueta declara el documento como tipo html 5</td>
+        </tr>
+        <tr>
+          <td>&lt;html&gt;&lt;/html&gt;&nbsp; &nbsp;</td>
+          <td>Lo que va dentro de estas etiquetas es html</td>
+        </tr>
+        <tr>
+          <td>&lt;head&gt;&lt;/head&gt;&nbsp;</td>
+          <td>Información sobre el documento</td>
+        </tr>
+        <tr>
+          <td>&lt;title&gt;&lt;/title&gt;&nbsp;</td>
+          <td>Título del documento</td>
+        </tr>
+        <tr>
+          <td>&lt;body&gt;&lt;/body&gt;&nbsp; </td>
+          <td>Parte visible del documento</td>
+        </tr>
+        <tr>
+          <td>&lt;h1&gt;&lt;/h1&gt;&nbsp;&nbsp;&nbsp;</td>
+          <td>Describe un encabezado </td>
+        </tr>
+        <tr>
+          <td>&lt;p&gt;&lt;/p&gt;&nbsp;</td>
+          <td>Describe un parrafo de texto</td>
+        </tr>
+      </table>
+      <p> El navegador no visualiza las etiquetas sino que las utiliza para determinar como mostrar el documento.Ahora pulsa <a href="ejemplo1.html" target="new">aquí</a> y verás que es lo que se muestra en un navegador al procesar la anterior página.</p>
+      <h3>Estructura de una página HTML</h3>
+      <p>La estructura de una página es la siguiente:</p>
+      <figure><img src="images/estructura.png"  />
+      <figcaption>
+        <p>Estructura básica</p>
+      </figcaption>
+      </figure>
+      <p>Podemos ver que algunos elementos contienen a otros, &lt;html&gt; contiene a todo el documento, &lt;head&gt; solo contiene en este caso el título de a página y &lt;body&gt; contiene todo lo que se muestra realmente en el navegador, en el ejemplo un encabez Más adelante hablaremosado y un par de párrafos. Aunque esto es adelantarse un poco podemos adivinar que una página web tiene una estructura erárquica de elementos padre que contienen otros elementos hijo.Más adelante hablaremos de esta extructura.</p>
+  <h2>Editores</h2>
+  <p>HTML es un lenguaje interpretado y escrito en texto plano, eso quiere decir que no es necesario utilizar un editor específico ni un entorno de programación especializado, puedes utilizar un editor de texto cualquiera, sin embargo no es recomendable utilizar los editores de texto que todos conocemoscomo  MS Word. Este tipo de editores están pensados para publicar escritos con formato enriquecido por lo que añaden código y caracteres especiales por defecto,  no entregan un texto &quot;limpio&quot; que es lo que interesa para programación. En realidad es mucho mejor utilizar un editor lo más básico posible como el notepad de windows o&nbsp;nano en linux que no añaden nada al texto que escribimos, eso sí, estos editores ofrecen poca, por no decir ninguna, ayuda para programar. </p>
+  <p>Una mejor opción es utilizar editores especializados para programación. De estos hay muchos y muy buenos y si preguntas por ahí verás que cada cual tiene su opinión, mi recomendación es que investigues y pruebes las distintas soluciones que ofrece el mercado, finalmente encontrarás el que mejor te cuadre.</p>
+  <p>En cualquier caso seguramente ya conocerás alguno de estos, pero  en el caso de que seas un 'absolut beginner' en estos temas te haré un par de recomendaciones. Los dos entornos que más suelo utilizar son los siguientes.</p>
+  <p>El primero es de pago y enormemente conocido, me refiero a <a href="http://www.adobe.com/es/products/dreamweaver.html">Dreamweaver</a> de Adobe. Sus ventajas son que soporta todo tipo lenguajes para programción web,   html,   php, css, javascript; con multitud de ayudas a la programación, corrección de errores de sintaxis, sugerencia de código; además facilita mucho la integración de los diferentes componentes que tengas para tus sitios web ya que gestiona desde la creación y mantenimiento de sitios, gestión de servidores locales o remotos así como la sincronización de los ficheros con los servidores por lo que no se necesita un cliente FTP externo. También dispone de  conexión con editores de gráficos, flash, animaciones y un largo etcetera, de hecho es uno de los editores más utilizados del mundo desde hace un montón de años. </p>
+  <p>Pero para muchos la caracerística estrella de Dreamweaver es el panel de programación wysiwyg que permite introducir texto formateado directamente con un cierto grado de formateo, casi como si de Word se tratara, así no es necesario andar poniendo etiquetas cuando quieres texto en negrita, ocursiva, se pueden añadir estilos simplemente seleccionando el texto que quieres y aplicando dicho estilo en un menú emergente, etc. Por ejemplo, los textos de estas páginas los he escrito directamente así.</p>
+  <p>&nbsp;¿Desventajas? Que es de pago y que para cosas sencillas puede llegar a ser un poco farragoso y por supuesto al ser tan completo la curva de aprendizaje es más lenta.</p>
+  <p>El aspecto que tiene este entorno es el siguiente:</p>
+  <figure><img src="images/dreamweaver.png" alt=""/>  <figcaption><strong>Aspecto del entorno Dreamweaver</strong></figcaption>
+  </figure>
+  
+  <p>Otro editor que utilizo mucho es <a href="http://www.aptana.com/products/studio3/download.html">Aptana Studio</a>, también tiene ayudas a la edición y  sugerencia de código que permite introducir las etiquetas  incluso más rápido que en Dreamweaver, también soporta todos los lengujes de programación web (html, css, php, etc) y dispone de muchas y muy buenas ayudas a la programación, depurador de código, previsualización,  gestión de archivos y sítios aunque no dispone de cliente FTP, y lo mejor es que es totalmente gratuito. Además es muy fácil de usar aunque solo viene en inglés, pero si piensas dedicarle tiempo a este mundillo y el inglés es un problema para tí lo llevas crudo. </p>
+  <p>Su desventaja con respecto a Dreamweaver es que este último tiene más utilidades y sobre todo que Dreamweaver dispone del editor wysiwyg. Pero no te confundas para muchas cosas,  Aptana es  más ágil que Dreamweaver así que no es raro el ir alternando entre uno y otro dependiendo de la tarea en ese momento. </p>
+  <p>En cualquier caso, para gustos colores, Estos dos no son ni de lejos las únicas opciones, también está Compozer para Linux, Sublime Text, y muchos otros. Los que he comentado son solo las que de momento yo estoy utilizando; como te he dicho antes, investiga, prueba por ti mismo y decide.</p>
+  <figure><img src="images/aptana.png" alt=""/>
+    <figcaption><strong>Aspecto del entorno Aptana</strong></figcaption>
+  </figure>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+
+       </article>
+  <!-- InstanceEndEditable -->
+    <h4><a href="#cabecera"><img src="../images/icono-arriba.gif" width="32" height="32"  alt=""/></a>      
+      Volver arriba</h4>
+    </main>
+<!--***********************BARRA LATERAL*********************************-->
+	<aside id="indice">
+       <iframe src="../contenidos.html"   height="900" width="200" frameborder="0"></iframe>
+    </aside>
+<!--************************PIE DE PAGINA*********************************-->
+    <footer>
+        &copy; Carlos Izquierdo Ferrando 2013
+    </footer>
+</div>
+</body>
+<!-- InstanceEnd --></html>

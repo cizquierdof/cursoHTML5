@@ -1,0 +1,119 @@
+/* estilos generales de texto*/
+h1, h2 {
+	color: #0000FF;
+	font-size: 36px;
+}
+h3 {
+	font-weight: 700;
+	color: #0000CC;
+	font-size: 24px;
+}
+h4 {
+	font-weight: 600;
+	color: #0000CC;
+	font-size: 18px;
+	}
+.code {
+	color: #CC6600;
+	font-size: normal;
+	font-style: normal;
+	font-weight: 400;
+	font-family: source-sans-pro;
+}
+/*****************decoración********************/
+button {
+	background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop( 0% , rgba(59,83,83,1.00)),color-stop( 100% , rgba(128,177,191,1.00)));
+	background-image: -webkit-linear-gradient(270deg,rgba(59,83,83,1.00) 0%,rgba(128,177,191,1.00) 100%);
+	background-image: linear-gradient(180deg,rgba(59,83,83,1.00) 0%,rgba(128,177,191,1.00) 100%);
+	color: #FFFFFF;
+}
+/*****************NAVEGADOR*******************/
+#navegador {
+	background-color: #CCCCCC;
+	padding-top: 10px;
+	padding-right: 15px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	border-style: ridge;
+}
+#navegador ul li  {
+	display: inline;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+#navegador ul li a {
+	color: #0000CC;
+}
+/***************ENVOLTORIO DEL CONJUNTO*************/
+#envoltorio{
+	max-width: 980px;
+	background-image: url(../images/PaperTexture-1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+/****************CABECERA**************************/
+#cabecera h1 {
+	text-shadow: 2px 2px 5px #333333;
+	color: #000000;
+}
+/****************CONTENIDO PRINCIPAL***************/
+main{
+	padding: 5px;
+	background: #EDEDED;
+	border-radius: 20px;
+	width: 75%;
+	min-width: 580px;
+	margin-top: 5px;
+	margin-left: 5px;
+	margin-bottom: 5px;
+	float: left;
+	-webkit-box-shadow: 8px 3px 5px #999999;
+	box-shadow: 8px 3px 5px #999999;
+}
+#articulo{
+	border:solid #EAD9BD;
+	border-radius:20px;
+	margin-bottom:10px;
+	padding:20px;
+}
+article figure img{
+	padding:3px;
+	 max-width:100%;
+}
+article figure figcaption{
+	font-weight: bold;
+	text-align: left;
+	font-size: small;
+	padding-bottom:5px;
+}
+
+aside {
+	/*width:20%;*/
+	min-width:200px;
+	background: #FFF3D9;
+	border-radius: 20px;
+	border-style: hidden;
+	float: left;
+	margin-left: 15px;
+	padding-left:-5px;
+	margin-top: 5px;
+	/*overflow-y: scroll;*/
+	-webkit-box-shadow: 8px 3px 5px #999999;
+	box-shadow: 8px 3px 5px #999999;
+	height: 100%;
+}
+footer{
+	clear: both;
+	background-color: #CCCCCC;
+	text-align: center;
+	color: #0000CC;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	font-weight: bold;
+	}

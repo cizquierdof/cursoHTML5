@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es"><!-- InstanceBegin template="/Templates/plantillaTemas.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Curso gratuito de HTML5">
+<meta name="keywords" content="HTML, CSS, CURSO, GRATIS">
+<meta name="autor" content="Carlos Izquierdo Ferrando">
+<!-- InstanceBeginEditable name="Titulo" -->
+<title>Curso HTML5/Encabezados</title>
+<!-- InstanceEndEditable -->
+<link href="../styles/base.css" rel="stylesheet" type="text/css">
+
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+<script>var __adobewebfontsappname__="dreamweaver"</script>
+<script src="http://use.edgefonts.net/source-sans-pro:n4:default.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div id="envoltorio">
+<!--********************ENCABEZADO*******************************-->  
+    <header id="cabecera" >
+            <h1>Curso de HTML5</h1>
+        <!-- Barra de navegación-->    
+        <nav  id="navegador">
+        <!-- InstanceBeginEditable name="Navegacion" -->
+      <ul>
+        <li><a href="../02atributos/atributos.html"><img src="../images/icono-left.gif" width="32" height="32"  alt=""/></a></li>
+        <li><a href="../index.html"><img src="../images/icono-home.gif" width="32" height="32"  alt=""/></a></li>
+        <li><a href="../04parrafos/parrafos.html"><img src="../images/icono-right.gif" width="32" height="32"  alt=""/></a></li>
+      </ul>
+  <!-- InstanceEndEditable -->
+        </nav>
+     </header>
+<!-- ********************SECCION PRINCIPAL************************--> 
+    <main class="principal" >
+    <!-- InstanceBeginEditable name="Articulo" -->
+    <article>
+      <h2>Encabezados &lt;h1&gt; ... &lt;h6&gt;</h2>
+      <p>Los encabezados sirven para distinguir y realzar la importancia de determinados textos como títulos, subtítulos, etc. Los encabezados tienen una relación jerárquica que empieza con el h1 que es el de mayor importancia hasta el h6 el de menor importancia. </p>
+      <p>Los encabezados se han usado tradicionalmente para resaltar texto como el nombre de los página, títulos de posts, etc. Es muy fácil caer en la tentación de utilizar estos elementos para resaltara textos, pero hoy en día esto no es recomendable. La nueva versión de HTML indica que los encabezados son elementos para estructurar, no para dar formato. A pesar de que el uso de estas etiquetas modifica la apariencia del texto que contienen haciéndolo más grande y resaltado que el resto de texto, no deberían usarse  con esta finalidad ya que los buscadores de Internet utilizan los encabezados para indexar la estructura de las páginas web. Los encabezados h1 deben indicar la parte principal del objeto en donde se sitúen, el h2 la segunda en importancia y así el resto.</p>
+      <p>Ejemplo:</p>
+      <p class="code">&lt;article&gt;<br><br>
+      &lt;h1&gt;Este es el título principal del artículo&lt;/h1&gt;<br><br>
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a aliquet urna. Donec turpis nulla, tincidunt vitae tincidunt ac, elementum vitae risus. Pellentesque ut elit et nulla feugiat mollis. Cras lacinia dui ac gravida sollicitudin. Quisque et odio eget tortor vulputate finibus.&lt;/p&gt;<br><br>
+        &lt;h2&gt;Este es un apartado secundario&lt;/h2&gt;<br><br>
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a aliquet urna. Donec turpis nulla, tincidunt vitae tincidunt ac, elementum vitae risus. Pellentesque ut elit et nulla feugiat mollis. Cras lacinia dui ac gravida sollicitudin. Quisque et odio eget tortor vulputate finibus.&lt;/p&gt;</p>
+      <p class="code">&lt;/article&gt;</p>
+      <h3>Línea horizontal</h3>
+      <p>La etiqueta &lt;hr&gt; crea una línea horizontal en la página web que puede utilizarse para separar contenido. Esta etiqueta no requiere etiqueta de finalización.</p>
+      <p>Ejemplo:</p>
+      <p>A continuación de este párrafo aparece una línea orizontal crada así.</p>
+      <hr>
+      <h3>El elemento &lt;head&gt;</h3>
+      <p>Seguramente te habrás percatado de que siempre, en todas las páginas hay una etiqueta &lt;head&gt; &quot;cabeza&quot;, no debemos confundir este elemento con los encabezados, son algo muy distinto.   &lt;head&gt;  no tiene nada que ver con los encabezados que hemos visto antes. Este elemento sirve para incluir los metadatos de la página y no es visible, de hecho no debe estar dentro del elemento &lt;body&gt; que es la parte visible de la página web. Los elementos más corrientes que aparecen en él son:</p>
+      <ul>
+        <li><strong>Elemento &lt;title&gt;</strong> que sirve para dar nombre a la página, este no es visible en la página pero aparecerá en la pestaña del navegador.</li>
+        <li><strong>Elemento &lt;meta&gt;</strong>, sirve para indicar el juego de caracteres.</li>
+        <li><strong>&lt;meta&gt;</strong> también incluye toda la información importante para la página pero que no se tiene que mostrar, como palabras clave, una descripción del sitio, autoría de la página y cosas así.</li>
+      </ul>
+      <p>Es importante incluir &lt;meta&gt; con el juego de caracteres, sobre todo en idiomas como el español que utilizan caracteres especiales como acentos o la ñ. De hecho esta hoja tiene definido &lt;meta charset=&quot;utf-8&quot;&gt; dentro del elemento &lt;head&gt;, en caso contrario no se verían ni los acentos ni la ñ en la mayoría de navegadores, digo esto porque Chrome si que activa edl juego de caracteres aunque la página no lo indique. Para ver como sería una página sin especificar el juego de caracteres pulsa el siguiente enlace.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ejemploSinMeta.html" target="_blank" heref=<a>Haz click aquí</a></p>
+      <p>Otros elementos muy comunes dentro de &lt;head&gt; son:</p>
+      <ul>
+        <li><strong>elemento &lt;style&gt;</strong>, indica los estilos CSS que aplicar internamente</li>
+        <li><strong>&lt;link&gt;</strong> indica una hoja de estilos CSS externa que se aplicará.</li>
+      </ul>
+      <p>De todas formas dada la importancia de esta etiqueta, volveremos más adelante a dedicare algo de atención.</p>
+    </article>
+  <!-- InstanceEndEditable -->
+    <h4><a href="#cabecera"><img src="../images/icono-arriba.gif" width="32" height="32"  alt=""/></a>      
+      Volver arriba</h4>
+    </main>
+<!--***********************BARRA LATERAL*********************************-->
+	<aside id="indice">
+       <iframe src="../contenidos.html"   height="900" width="200" frameborder="0"></iframe>
+    </aside>
+<!--************************PIE DE PAGINA*********************************-->
+    <footer>
+        &copy; Carlos Izquierdo Ferrando 2013
+    </footer>
+</div>
+</body>
+<!-- InstanceEnd --></html>

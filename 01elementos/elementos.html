@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es"><!-- InstanceBegin template="/Templates/plantillaTemas.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Curso gratuito de HTML5">
+<meta name="keywords" content="HTML, CSS, CURSO, GRATIS">
+<meta name="autor" content="Carlos Izquierdo Ferrando">
+<!-- InstanceBeginEditable name="Titulo" -->
+<title>
+Curso HTML5/ELEMENTOS
+</title>
+<!-- InstanceEndEditable -->
+<link href="../styles/base.css" rel="stylesheet" type="text/css">
+
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+<script>var __adobewebfontsappname__="dreamweaver"</script>
+<script src="http://use.edgefonts.net/source-sans-pro:n4:default.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div id="envoltorio">
+<!--********************ENCABEZADO*******************************-->  
+    <header id="cabecera" >
+            <h1>Curso de HTML5</h1>
+        <!-- Barra de navegación-->    
+        <nav  id="navegador">
+        <!-- InstanceBeginEditable name="Navegacion" -->
+      <ul>
+          <li><a href="../00intro/intro.html"><img src="../images/icono-left.gif" width="32" height="32"  alt=""/></a></li>
+          <li><a href="../index.html"><img src="../images/icono-home.gif" width="32" height="32"  alt=""/></a></li>
+          <li><a href="../02atributos/atributos.html"><img src="../images/icono-right.gif" width="32" height="32"  alt=""/></a></li>
+        </ul>
+  <!-- InstanceEndEditable -->
+        </nav>
+     </header>
+<!-- ********************SECCION PRINCIPAL************************--> 
+    <main class="principal" >
+    <!-- InstanceBeginEditable name="Articulo" -->
+    <article>
+      <h2>Elementos HTML</h2>
+      <p>Como ya dije en el capítulo anterior, los documentos html se hacen con elementos,  los cuales consisten en  una etiqueta de inicio, una etiqueta de final y el contenido que va en el medio, el elemento es todo; etiquetas y contenido. Por ejemplo, un elemento de párrafo sería:</p>
+      <p class="code">&lt;p&gt;Esto es un párrafo&lt;/p&gt;</p>
+      <ul>
+        <li>&lt;p&gt; es la etiqueta de inicio</li>
+        <li>&lt;/p&gt; es la etiqueta de final</li>
+        <li><em>Esto es un párrafo</em> es el contenido</li>
+      </ul>
+      <p>la etiqueta &lt;p&gt; le dice al navegador que lo que hay entre &lt;p&gt; y &lt;/p&gt; tiene que tratarlo como un párrafo de texto.</p>
+      <p><strong>Nota:</strong> No siempre hay etiquetas de cierre en los elementos, algunos solo tienen etiqueta de apertura, uuno de los casos más sencillos es el elemento salto de línea &lt;br&gt; no necesita final, cuando el navegador encuentra eta etiqueta salta a la línea siguiente.</p>
+      <h3>Elementos anidados</h3>
+      <p>Ya hemos visto que los elementos html pueden estar anidados, esto es elementos que contienen otros elementos. En el ejemplo:</p>
+      <p class="code">&lt;!DOCTYPE html&gt;<br>
+        &lt;html&gt;<br>
+        <br>
+        &lt;body&gt;<br>
+        &lt;h1&gt;My First Heading&lt;/h1&gt;<br>
+        &lt;p&gt;My first paragraph.&lt;/p&gt;<br>
+        &lt;/body&gt;<br>
+        <br>
+        &lt;/html&gt;</p>
+      <p>El&nbsp; elemento &lt;body&gt; contiene a los elementos &lt;h1&gt; y &lt;p&gt;, y el elemento &lt;html&gt; contiene a su vez el elemento &lt;body&gt;</p>
+      <h3>Elementos vacíos</h3>
+      <p>Algunos elementos html no llevan contenido, por eso se llaman elementos vacíos Un ejemplo es otra vez la etiqueta &lt;br&gt; que define un elemento de salto de línea, no tiene contenido, solo le indica al navegador que debe saltar a la línea siguiente.</p>
+      <h3>Comentarios de código</h3>
+      <p>Cuando la cantidad de código empieza a crecer, es muy importante comentar cada parte importante del código que escribimos. Todos los lenguajes de programación disponen de alguna forma de hacer esto; en HTML se utiliza una etiqueta especial <span class="code">&lt;!--</span> para empezar el comentario y <span class="code">--&gt;</span> para terminarlo. Ejemplo:</p>
+      <p class="code" style="color:green">&lt;!-- Esto es un comentario --&gt;</p>
+      <p >El navegador no muestra los comentarios, pero ayudan a documentar el HTML añadiendo notificaciones y recordatorios. Los comentarios también son excelentes para corregir errores. Marcar parte del código como comentario permite ver que ocurre cuando deja de ejecutarse ese trozo.</p>
+      <pre class="code" style="color:green" >&lt;!-- NO EJECUTAR EL SIGUIENTE CODIGO
+      &lt;img border=&quot;0&quot; src=&quot;una_imagen.jpg&quot;&gt;
+--&gt;</pre>
+<p>También se pueden utilizar comentarios condicionales haciendo que las líneas de programa solo se ejecuten si se cumple una condición.</p>
+<p class="code" style="color:green">&lt;!-- if IE 8] --&gt; Este código solo se ejecuta en Internet Explorer&lt;![endif]--&gt;</p>
+<p >También puede haber comentarios generados por programas, por ejemplo Dreamweaver utiliza los comentarios &lt;!-- InstanceBegin... y &lt;!-- InstanceEnd... para marcar las diferentes secciones de sus plantillas.</p>
+<p ><strong>nota:</strong> La mayoría de editores utilizan una codificación por colores para los distintos tipos de texto que se usan, así por defecto en Dreamweaver se usa  el negro para texto normal, azul para palabras reservadas y etiquetas, gris para los comentarios, etc. por lo que es más fácil reconocerlos entre las otras posibles líneas de código.</p>
+      <h3>Escribir etiquetas con minúsculas</h3>
+      <p>Esto es una recomendación, no una obligación. Las etiquetas html no distinguen entre mayúsculas y minúsculas, sin embargo <a href="http://www.w3c.es/">W3C</a> la entidad que recopila y sostiene los estandares HTML, CSS y otros, recomienda usar minúsculas en HTML 5, en XHTML una versión más estricta del HTML, si las exige. El uso de mayúsculas puede considerarse una mala práctica.</p>
+      <p>&nbsp;</p>
+    </article>
+  <!-- InstanceEndEditable -->
+    <h4><a href="#cabecera"><img src="../images/icono-arriba.gif" width="32" height="32"  alt=""/></a>      
+      Volver arriba</h4>
+    </main>
+<!--***********************BARRA LATERAL*********************************-->
+	<aside id="indice">
+       <iframe src="../contenidos.html"   height="900" width="200" frameborder="0"></iframe>
+    </aside>
+<!--************************PIE DE PAGINA*********************************-->
+    <footer>
+        &copy; Carlos Izquierdo Ferrando 2013
+    </footer>
+</div>
+</body>
+<!-- InstanceEnd --></html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es"><!-- InstanceBegin template="/Templates/plantillaTemas.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Curso gratuito de HTML5">
+<meta name="keywords" content="HTML, CSS, CURSO, GRATIS">
+<meta name="autor" content="Carlos Izquierdo Ferrando">
+<!-- InstanceBeginEditable name="Titulo" -->
+<title>
+	Curso HTML5/Links
+</title>
+<!-- InstanceEndEditable -->
+<link href="../styles/base.css" rel="stylesheet" type="text/css">
+
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+<script>var __adobewebfontsappname__="dreamweaver"</script>
+<script src="http://use.edgefonts.net/source-sans-pro:n4:default.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div id="envoltorio">
+<!--********************ENCABEZADO*******************************-->  
+    <header id="cabecera" >
+            <h1>Curso de HTML5</h1>
+        <!-- Barra de navegación-->    
+        <nav  id="navegador">
+        <!-- InstanceBeginEditable name="Navegacion" -->
+        <ul>
+          <li><a href="../06formatotexto/formatotexto.html"><img src="../images/icono-left.gif" width="32" height="32"  alt=""/></a></li>
+          <li><a href="../index.html"><img src="../images/icono-home.gif" width="32" height="32"  alt=""/></a></li>
+          <li><a href="../08imagenes/imagenes.html"><img src="../images/icono-right.gif" width="32" height="32"  alt=""/></a></li>
+        </ul>
+        <!-- InstanceEndEditable -->
+        </nav>
+     </header>
+<!-- ********************SECCION PRINCIPAL************************--> 
+    <main class="principal" >
+    <!-- InstanceBeginEditable name="Articulo" -->
+    <article class="articulo">
+        <h2>Enlaces HTML  o Hyperlinks</h2>
+      <p>Un hyperlink es un elemento HTML que cuando se hace click sobre él hace saltar al navegador a otro documento. Para hacer un enlace se marca con la etiqueta &lt;a&gt; y con la siguiente sintaxis. </p>
+        <p class="code">&lt;a href=&quot;url&quot;&gt;Texto del link&lt;a&gt;</p>
+        <p>Vemos un ejemplo y luego lo explico:</p>
+      <p class="code">&lt;a href=&quot;http://www.w3schools.com/html/&quot;&gt;Tutorial HTML&lt;a&gt;</p>
+      <ul>
+          <li>&lt;a&gt; es la propia etiqueta que indica el enlace.</li>
+          <li><strong>href</strong> es un atributo que indica la dirección de destino. URL que pude ser una dirección absoluta o relativa.</li>
+          <li><strong>Texto del link</strong> es el texto visible en la página y que si no se ha cambiado, por defecto viene en azul y subrayado.</li>
+      </ul>
+      <p>El texto del enlace no tiene porque ser un texto, puede ser una imagen o cualquier otro elemento HTML. El URL puede ser una página externa si se utiliza una dirección completa, o puede ser local si se utilizan URL relativas, o incluso a la propia página si se utliza con el símbolo #. </p>
+      <p>Cuando se pasa el cursor del ratón sobre un enlace, pasan normalmente dos cosas:</p>
+      <ul>
+        <li>La flecha del ratón se convierte en una pequeña mano.</li>
+        <li>El color del elemento de enlace cambia.</li>
+      </ul>
+      <p>Por defecto en los navegadores los enlaces aparecen como texto subrayado de uno de los siguientes colores:</p>
+      <ul>
+        <li>azul si no se ha visitado el sitio</li>
+        <li>púrpura si se ha visitado ya el sitio.</li>
+      </ul>
+      <p>Esto se puede cambiar mediante CSS aplicando estilos a los diferentes atributos de &lt;a&gt;</p>
+      <ul>
+        <li>a:link es el propio link</li>
+        <li>a:visited es el atributo del enlace visitado</li>
+        <li>a:hover atributo de cuando se pasa por encima el ratón.</li>
+        <li>a:active atributo de enlace activo</li>
+      </ul>
+      <p>Un ejemplo de modificación de estos atributos por defecto podrían ser:</p>
+      <pre class="code">&lt;style&gt;		
+	a:link, a:visited {<br>		color:#49ade9;<br>		background-color:orange;<br>		text-decoration:none;<br>		}<br>	a:hover {<br>		color:orange;<br>		background-color:#49ade9;<br>		text-decoration:none;<br>	}<br>	a:active {<br>		color:orange;<br>		background-color:#C0C0C0;<br>		text-decoration:none;<br>	}
+&lt;/style&gt;</pre>
+<button type="button" onClick='window.open("linkAtributes.html","_blank","width=640, height=480")'>CompruÉbalo</button>
+<p>En el código anterior como se puede ver, se cambia el estilo en tres circunstancias; cuando se pasa el ratón sobre él hoover<em>, </em>cuando ya lo hemos pulsado alguna vez: <em>visited</em> y cuando está activo, es decir cuando se a pulsado pero todavía no se a soltado: <em>active</em>.</p>
+<h3>El atributo target</h3>
+<p>Este atributo indica al navegador donde queremos que se abra el documento referenciado por href, hay cinco posibilidades:</p>
+<ul>
+  <li><strong>_blank</strong> abre el documento en una nueva ventana o pestaña según esté definido en las preferencias del navegador.</li>
+  <li><strong>_self</strong> lo abre en la misma página desde donde se hizo el click. Es la opción por defecto.</li>
+  <li><strong>_parent</strong> abre el documento en un marco asociado.</li>
+  <li><strong>_top</strong> lo abre en el cuerpo total de la ventana. </li>
+  <li><strong>framename</strong> abre el documento en un marco determinado.</li>
+  </ul>
+<p>Si la página esta incrustada en un marco se puede utilizar &quot;_top&quot; para romper el marco. </p>
+<p>Seguro que habeis visto otra posibilidades, pero esto no se consigue con HTML sino con JavaScript, y eso ya está fuera del ámbito de este pequeño manual.</p>
+<h3 id="imgAslink">Utilizar imágenes como enlaces</h3>
+<p>Es muy corriente utilizar imágenes como enlaces. Esto se puede hacer mediante el siguiente código:</p>
+<pre><span class="code">&lt;!DOCTYPE html&gt;<br>&lt;html lang=&quot;es&quot;&gt;<br>	&lt;head&gt;<br>		&lt;meta charset=&quot;utf-8&quot;&gt;<br>		&lt;title&gt;Estilos enlace&lt;/title&gt;<br>	<br>	&lt;/head&gt;<br>	&lt;body&gt;<br>		&lt;h1&gt;Una imagen puede ser un enlace&lt;/h1&gt;<br>		&lt;p&gt;<br>			&lt;a href=&quot;minion.html&quot; target=&quot;_blank&quot;  &gt;
+				&lt;img src=&quot;images/emoticon-happy.png&quot; 
+				style=&quot;width: 100px; height: 100px; border: 0&quot; /&gt;&lt;/a&gt;<br>		&lt;/p&gt;<br>		&lt;article&gt;<br>			Los enlaces de esta página se les ha cambiado los 
+			estilos por defecto<br>		&lt;/article&gt;<br>	&lt;/body&gt;<br>&lt;/html&gt;</span><br>
+</pre>
+<button type="button" onClick='window.open("imageLink.html","_blank","width=640, height=480")'>Compruébalo</button>
+<h3>El atributo id</h3>
+<p>En las etiquetas se puede añadir un atributo id que las  identifica de forma única por lo que se puede utilizar para crear un marcador  que posteriormente se puede usar en un enlace. Esto es, supongamos un párrafo al que queremos hacerle una referencia para encontrarlo rápidamente, esto se haría:</p>
+<p class="code">&lt;p id=&quot;miParrafo&quot;&gt;Este es el párrafo al que queremos hacer referencia&lt;/p&gt;</p>
+<p>En cualquier punto de la página podríamos poner un enlace a este párrafo de la siguiente manera:</p>
+<p class="code">&lt;a href=&quot;#miParrafo&quot;&gt;Ir al párrafo&lt;/a&gt;</p>
+<p>Como vemos el id se indica mediante el carácter almohadilla #.</p>
+<p>Vamos a ver esto con un ejemplo:</p>
+<pre class="code">&lt;!DOCTYPE HTML&gt;<br>&lt;html lang=&quot;es&quot;&gt;<br>	&lt;head&gt;<br>		&lt;title&gt;href a id&lt;/title&gt;<br>		&lt;meta charset=&quot;UTF-8&quot; /&gt;<br>	&lt;/head&gt;<br>	&lt;body&gt;<br>		&lt;h1 id=&quot;home&quot;&gt;Documento con muchos capítulos&lt;/h1&gt;<br>		&lt;ul&gt;<br>			&lt;li&gt;&lt;a href=&quot;#c1&quot;&gt;&lt;strong&gt;Capítulo 1&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;<br>			&lt;li&gt;&lt;a href=&quot;#c2&quot;&gt;&lt;strong&gt;Capítulo 2&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;<br>			&lt;li&gt;&lt;a href=&quot;#c3&quot;&gt;&lt;strong&gt;Capítulo 3&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;<br>			&lt;li&gt;&lt;a href=&quot;#c4&quot;&gt;&lt;strong&gt;Capítulo 4&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;<br>			&lt;li&gt;&lt;a href=&quot;#c5&quot;&gt;&lt;strong&gt;Capítulo 5&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;<br>			&lt;li&gt;&lt;a href=&quot;#c6&quot;&gt;&lt;strong&gt;Capítulo 6&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;<br>			&lt;li&gt;&lt;a href=&quot;#c7&quot;&gt;&lt;strong&gt;Capítulo 7&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;<br>			&lt;li&gt;&lt;a href=&quot;#c8&quot;&gt;&lt;strong&gt;Capítulo 8&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;<br>			&lt;li&gt;&lt;a href=&quot;#c9&quot;&gt;&lt;strong&gt;Capítulo 9&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;<br>			&lt;li&gt;&lt;a href=&quot;#c10&quot;&gt;&lt;strong&gt;Capítulo 10&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;<br>		&lt;/ul&gt;<br>		&lt;h2 id=&quot;c1&quot;&gt;Capítulo 1&lt;/h2&gt;<br>		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <br>		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <br>		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo <br>		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse <br>		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non<br>		 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;<br>		 &lt;a href=&quot;#home&quot;&gt;&lt;strong&gt;volver arriba&lt;/strong&gt;&lt;/a&gt;<br>		 &lt;h2 id=&quot;c2&quot;&gt;Capítulo 2&lt;/h2&gt;<br>		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <br>		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <br>		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo <br>		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse <br>		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non<br>		 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;<br>		 &lt;a href=&quot;#home&quot;&gt;&lt;strong&gt;volver arriba&lt;/strong&gt;&lt;/a&gt;<br>		 &lt;h2 id=&quot;c3&quot;&gt;Capítulo 3&lt;/h2&gt;<br>		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <br>		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <br>		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo <br>		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse <br>		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non<br>		 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;<br>		 &lt;a href=&quot;#home&quot;&gt;&lt;strong&gt;volver arriba&lt;/strong&gt;&lt;/a&gt;<br>		 &lt;h2 id=&quot;c4&quot;&gt;Capítulo 4&lt;/h2&gt;<br>		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <br>		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <br>		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo <br>		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse <br>		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non<br>		 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;<br>		 &lt;a href=&quot;#home&quot;&gt;&lt;strong&gt;volver arriba&lt;/strong&gt;&lt;/a&gt;<br>		 &lt;h2 id=&quot;c5&quot;&gt;Capítulo 5&lt;/h2&gt;<br>		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <br>		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <br>		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo <br>		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse <br>		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non<br>		 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;<br>		 &lt;a href=&quot;#home&quot;&gt;&lt;strong&gt;volver arriba&lt;/strong&gt;&lt;/a&gt;<br>		 &lt;h2 id=&quot;c6&quot;&gt;Capítulo 6&lt;/h2&gt;<br>		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <br>		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <br>		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo <br>		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse <br>		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non<br>		 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;<br>		 &lt;a href=&quot;#home&quot;&gt;&lt;strong&gt;volver arriba&lt;/strong&gt;&lt;/a&gt;<br>		 &lt;h2 id=&quot;c7&quot;&gt;Capítulo 7&lt;/h2&gt;<br>		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <br>		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <br>		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo <br>		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse <br>		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non<br>		 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;<br>		 &lt;a href=&quot;#home&quot;&gt;&lt;strong&gt;volver arriba&lt;/strong&gt;&lt;/a&gt;<br>		 &lt;h2 id=&quot;c8&quot;&gt;Capítulo 8&lt;/h2&gt;<br>		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <br>		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <br>		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo <br>		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse <br>		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non<br>		 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;<br>		 &lt;a href=&quot;#home&quot;&gt;&lt;strong&gt;volver arriba&lt;/strong&gt;&lt;/a&gt;<br>		 &lt;h2 id=&quot;c9&quot;&gt;Capítulo 9&lt;/h2&gt;<br>		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <br>		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <br>		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo <br>		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse <br>		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non<br>		 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;<br>		 &lt;a href=&quot;#home&quot;&gt;&lt;strong&gt;volver arriba&lt;/strong&gt;&lt;/a&gt;<br>		 &lt;h2 id=&quot;c10&quot;&gt;Capítulo 10&lt;/h2&gt;<br>		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <br>		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <br>		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo <br>		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse <br>		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non<br>		 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;<br>		 &lt;a href=&quot;#home&quot;&gt;&lt;strong&gt;volver arriba&lt;/strong&gt;&lt;/a&gt;<br>		 <br>	&lt;/body&gt;<br>&lt;/html&gt;</pre>
+    <button type="button" onClick='window.open("idREfs.html","_blank","width=640, height=480")'>Compruébalo</button>
+    <p>Este tipo de referencia se puede hacer dentro de la misma página como hemos visto o hacia otras páginas, en este caso ponemos una URL absoluta como en el siguiente ejemplo:</p>
+    <p class="code">&lt;a href=&quot;http://www.blabla.com/paginaDestino#id&quot;&gt;Ir a 'id' en www.blabla.com&lt;/a&gt;</p>
+
+    </article>
+	<!-- InstanceEndEditable -->
+    <h4><a href="#cabecera"><img src="../images/icono-arriba.gif" width="32" height="32"  alt=""/></a>      
+      Volver arriba</h4>
+    </main>
+<!--***********************BARRA LATERAL*********************************-->
+	<aside id="indice">
+       <iframe src="../contenidos.html"   height="900" width="200" frameborder="0"></iframe>
+    </aside>
+<!--************************PIE DE PAGINA*********************************-->
+    <footer>
+        &copy; Carlos Izquierdo Ferrando 2013
+    </footer>
+</div>
+</body>
+<!-- InstanceEnd --></html>

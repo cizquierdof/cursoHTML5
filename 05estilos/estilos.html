@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es"><!-- InstanceBegin template="/Templates/plantillaTemas.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Curso gratuito de HTML5">
+<meta name="keywords" content="HTML, CSS, CURSO, GRATIS">
+<meta name="autor" content="Carlos Izquierdo Ferrando">
+<!-- InstanceBeginEditable name="Titulo" -->
+<title>
+	Curso HTML5/Estilos CSS
+</title>
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+<script>var __adobewebfontsappname__="dreamweaver"</script>
+<script src="http://use.edgefonts.net/source-sans-pro:n2,n4:default.js" type="text/javascript"></script>
+
+<!-- InstanceEndEditable -->
+<link href="../styles/base.css" rel="stylesheet" type="text/css">
+
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+<script>var __adobewebfontsappname__="dreamweaver"</script>
+<script src="http://use.edgefonts.net/source-sans-pro:n4:default.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div id="envoltorio">
+<!--********************ENCABEZADO*******************************-->  
+    <header id="cabecera" >
+            <h1>Curso de HTML5</h1>
+        <!-- Barra de navegación-->    
+        <nav  id="navegador">
+        <!-- InstanceBeginEditable name="Navegacion" -->
+        <ul>
+          <li><a href="../04parrafos/parrafos.html"><img src="../images/icono-left.gif" width="32" height="32"  alt=""/></a></li>
+          <li><a href="../index.html"><img src="../images/icono-home.gif" width="32" height="32"  alt=""/></a></li>
+          <li><a href="../06formatotexto/formatotexto.html"><img src="../images/icono-right.gif" width="32" height="32"  alt=""/></a></li>
+        </ul>
+        <!-- InstanceEndEditable -->
+        </nav>
+     </header>
+<!-- ********************SECCION PRINCIPAL************************--> 
+    <main class="principal" >
+    <!-- InstanceBeginEditable name="Articulo" -->
+    <article class="articulo">
+        <H2>Estilos</H2>
+        <p>HTML sirve para dar estructura al documento web, pero aparte de  unos pocos efectos de formateo como son los caracteres en negrita,  itálica, encabezados, etc. a base de etiquetas no conseguiremos  resultados impactantes. Los colores,  imágenes de fondo, los tipos de  letra, en definitiva casi todo lo que hace que una página sea atractiva  se consigue mediante estilos CSS. Estas siglas  quieren decir Cascade Style Sheets, o en castellano, Hojas de Estilo en Cascada. El nombre hace referencia a que se van aplicando estilos en cascada, es decir unos encima de otros. </p>
+        <p>Los estilos tienen un orden jerárquico, se aplican según su importancia,  origen,  especificidad y orden de aparición, es decir que según donde estén escritos y que tipo de regla se aplique se aplicará uno u otro estilo. También se tiene en cuenta el tipo de dispositivo en el que se va a mostrar el documento. El orden que sigue un navegador para aplicar las reglas es muy complejo y sería algo a tratar en un curso de CSS, por tanto no voy a meterme con ello en profundidad, solo decir que es de extrema importancia tener claro dicho orden para no volverse loco cuando más tarde empieces a aplicar estilos complejos. </p>
+        <p>A modo de resumen el orden es:</p>
+        <ol>
+          <li>Tipo de medio: pantalla, móvil, tablet, etc. Esto se especifica al definir los estilos mediante declaraciones.</li>
+          <li>Importancia y origen de las reglas CSS. A su vez tienen este orden:
+            <ol type="a">
+              <li>Reglas por defecto del navegador, cada navegador tiene las suyas propias.</li>
+              <li>Preferencias normales del usuario.</li>
+              <li>Reglas normales declaradas en los estilos del autor.</li>
+              <li>Reglas declaradas <strong>!important</strong> por el autor.</li>
+              <li>Preferencias con<strong> !important </strong>del usuario.</li>
+            </ol>
+          </li>
+          <li>Especificidad del selector. Por ejemplo una etiqueta es menos especifica que una class.</li>
+          <li>Orden de aparición de la regla.</li>
+        </ol>
+        <h2>Formas de aplicar estilos CSS</h2>
+        <p>Hay tres formas de ir declarando estilos CSS, Inline o en línea, mediante la etiqueta &lt;style&gt; y declaraciones en un fichero de estilos aparte.        </p>
+        <H3>Estilos Inline</H3>
+        <p>Este es el método más inmediato, consiste en añadir un atributo  <em>style</em> dentro de la etiqueta HTML, por ejemplo para cambiar el color del texto en un encabezado:</p>
+        <p class="code">&lt;h1 style=&rdquo;color:blue&rdquo;&gt;Este es un encabezado  azul&lt;/h1&gt;</p>
+        <p>El atributo style tiene la siguiente sintaxis: </p>
+        <p class="code">style=&quot;propiedad:valor&quot;</p>
+        <p>Se pueden añadir varias propiedades al mismo tiempo separandolas con ; por ejemplo:</p>
+      <p><span class="code">&lt;h1 style=&rdquo;color:blue; font-style:italic&rdquo;&gt;Este es un encabezado  azul&lt;/h1&gt;</span></p>
+        <p>Esta forma  está totalmente  desaconsejada. ¿Ves cual es el fallo? </p>
+      <p>Cuando empieza a crecer el código de la página, aplicar estilos elemento por elemento es demencial, porque su mantenimiento resulta muy difícil. Imagina ir línea por línea para  cambiar todos los estilos, de todos los elementos de la página. </p>
+        <p>Entonces si no se deben utilizar ¿Para que están? </p>
+        <p>Que estén desaconsejados no significa que no puedan resultar útiles en determinados casos. Supón que tienes aplicado un estilo para los enlaces de tu tira de navegación. Todos los enlaces se representarán según lo que indique la hoja de estilos, sin embargo te interesa que uno de ellos, y solo uno, tenga un estilo diferente. Aplicarle un estilo <em>inline</em> soluciona el problema, pero ojo; esto se debe hacer para este tipo de excepciones; si al final resulta que esto lo vas a repetir en más sitios, considera el uso de uno de los otros dos sistemas.</p>
+      <H3>Estilos internos</H3>
+      <p>Consiste en definir todos los estilos que se van a utilizar en el  documento en único sitio, normalmente dentro de la sección &lt;head&gt;  del documento. El navegador reconoce una definición de estilos todo  lo que encuentra entre las etiquetas &lt;style&gt; y &lt;/style&gt;. Por  ejemplo queremos una página con fondo gris, texto de párrafo cían   y  encabezados amarillos, para hacerlo según el modelo de estilos internos pondriamos.</p>
+      
+      <pre class="code">&lt;!DOCTYPE HTML&gt;<br>&lt;HTML&gt;<br>	&lt;head&gt;<br>		&lt;meta charset=&quot;UTF-8&quot; /&gt;<br>		&lt;title&gt;sample page&lt;/title&gt;<br>		&lt;style&gt;<br>			body{<br>				background-color: grey;		<br>			}<br>			h1 {color: blue;}<br>			p {color: cyan;}<br>		&lt;/style&gt;<br>	&lt;/head&gt;<br>	&lt;body&gt;<br>		&lt;h1&gt;Encabezado en azul&lt;/h1&gt;<br>		&lt;p&gt;Párrafo de texto en color cían&lt;/p&gt;<br>	&lt;/body&gt;<br>&lt;/HTML&gt;</pre>
+        <button type="button" onClick='window.open("ejemploEstilo0.html","_blank","width=640, height=480")'>Compruébalo</button>
+      <p>Este sistema es aconsejable cuando  tienes que aplicar estilo a una sola página, si lo que quieres es que tu web, compuesta por muchas páginas, tenga un estilo uniforme es mejor utilizar el método que se explica a continuación.</p>
+      <h3>Estilos externos</h3>
+          <p>
+          Es parecido a la aplicación
+    de los estilos internos, ya que se hace la definición de todos los atributos en el mismo sitio; solo que esta vez se hace en un fichero aparte. Este fichero debe tener la extensión .css y es especialmente útil para dar un aspecto homogeneo a un grupo de páginas, de esta forma solo tenemos que indicar  cual o cuales ficheros de estilo aplicar. Sobre todo, la enorme ventaja de esto es, que si queremos modificar el estilo, lo hacemos en único lugar y se aplicará en todas las páginas que lo carguen. Este sistema tiene, además la ventaja de separar totalmente los códigos, de manera que cuando escribimos HTML, nos centramos solo en la estructura, y cuando escribimos CSS nos centramos solo en la forma.
+          <p>Los estilos externos CSS  se asocian a una página HTML a través de una etiqueta &lt;link&gt; en la sección &lt;head&gt; de la siguiente forma:
+          <pre class="code">&lt;!DOCTYPE HTML&gt;<br> &lt;HTML&gt;<br> 	&lt;head&gt;
+         <strong>&lt;link <strong>href</strong> ="/path/stylesheet.css" <strong>rel</strong>="styles.css"&gt;</strong><br>     &lt;/head&gt;
+</pre> 
+
+<p>Donde stylesheet.css es el fichero de estilo CSS y /path/ es el directorio donde se encuentra, pudiendo estar en la misma carpeta que el  documento html o no. Por ejemplo si el archivo es <em>miEstilo.css</em> podemos encontrarnos:</p>
+<ul>
+  <li><strong>href=miEstilo.css </strong>el archivo está en el mismo directorio que la página</li>
+  <li><strong>href=../stiles/mi-estilo.css</strong> es una dirección relativa. Para encontrar el fichero nos iremos una carpeta hacia arriba y dentro de esta en otra llamada <em>stiles</em>.</li>
+  <li><strong>href=/dir_raiz/estilos/miEstilo.css</strong> es una dirección absoluta, el fichero está en la carpeta estilos que cuelga del directorio raíz del sitio.</li>
+</ul>
+<p>Tanto en las hojas de estilo internas como en las externas se pueden definir varios atributos a la vez para un mismo elemento separándolos con punto y coma, la sintaxis es la siguiente: </p>
+<p class="code">elemento { atributo1:valor; atributo2:valor;...atributo:valor;}</p>
+<p>también se pueden definir grupos de atributos para varios elementos a la vez separando cada elemento por comas:</p>
+<p class="code">elemento1, elemento2, elemento3 {atributo1:valor; atributo2:valor;...}</p>
+<p>en la siguiente línea vamos a aplicar un estilo de fuente y color simultáneamente a las cabeceras h1, h3 y a los párrafos de texto.</p>
+<p class="code">h1, h3, p {color:#0000cc; font-style:italic; }</p>
+<h2 >Herencia de estilos</h2>
+<p >Quizá me esté metiendo en un jardín del que me resulte complicado salir, pero me gustaría hablar un poco de la herencia de estilos, ya que creo que es uno de los aspectos de CSS más difíciles de pillar. Algo importante a entender es, que pasa si le aplicamos estilo a un elemento, que contiene otro elemento, que ya tenía un estilo. </p>
+<p >Todo esto tiene que ver con lo que hablamos al principio del tema sobre el orden de aplicación del CSS. Vamos a verlo con un ejemplo. He intentado que sea  lo más sencillo posible. Mira con atención el siguiente documento html.</p>
+<pre class="code" >&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;Herencia de estilos&lt;/title&gt;
+
+<strong>&lt;style&gt;
+   h1 {color:orange; font-size:36px;}
+   header {color:blue; font-size:24px;}
+   article {font-size:9px;}
+   article h1 {color:black; font-size:18px;}
+&lt;/style&gt;</strong>
+
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;h1&gt;TITULO INDEPENDIENTE CON&lt;/h1&gt;
+&lt;p&gt;Este es un pequeño párrafo independiente. Todos los títulos y párrafos 
+		de esta página están construidos con &amp;lt;h1&amp;gt; y &amp;lt;p&amp;gt; respectivamente.&lt;/p&gt;
+
+&lt;header&gt;
+&lt;h1&gt;TITULO DE ENCABEZADO&lt;/h1&gt;
+&lt;p&gt;Un pequeño párrafo para el encabezado&lt;/p&gt;
+&lt;/header&gt;
+
+&lt;article&gt;
+&lt;h1&gt;TITULO DE &lt;span style=&quot;color:red;&quot;&gt;ARTICULO&lt;/span&gt;&lt;/h1&gt;
+&lt;p&gt;Otro pequeño párrafo para el artículo&lt;/p&gt;
+&lt;/article&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+<p>Lo primero que vemos es que le he aplicado una hoja de estilos interna con la etiqueta &lt;style&gt; en la que sucesivamente se hace lo siguiente:</p>
+<ul>
+  <li>Los encabezados &lt;h1&gt; tendrán texto naranja de 36 píxeles.</li>
+  <li>Las cabeceras  &lt;header&gt; tendrán texto azul de 24 píxeles.</li>
+  <li>Los artículos &lt;article&gt; tendrán texto de 9 píxeles.</li>
+  <li>Los encabezados de los artículos serán de texto negro y 18 píxeles.</li>
+  <li>El elemento &lt;spam&gt; dentro del&lt;h1&gt; del artículo tiene un estilo <em>inline</em> que le cambia el color a rojo.</li>
+  </ul>
+<p>Veamos que es lo que ocurre:</p>
+      <button type="button" onClick='window.open("herencia.html","_blank","width=640, height=480")'>Pulsa aquí</button>
+<p>Efectivamente los encabezados son naranja y de 36px salvo el del artículo.</p>
+<p> Luego vemos que se aplica texto azul de 24px en la sección de encabezado, pero solo al texto del párrafo ¿porqué? </p>
+<p>Pues porque solo hemos dicho de cambiar el color a &lt;header&gt; y la regla que cambia el formato a los &lt;h1&gt; es más específica y sobrescribe a la más genérica del &lt;header&gt;. </p>
+<p>Por último tenemos que para el artículo se cambia tanto el tamaño del texto general como el de &lt;h1&gt; que, además también cambia de color, y eso  porque también se aplica una regla específica para los &lt;h1&gt; del &lt;article&gt;. Date cuenta de que en el párrafo del artículo no se hereda el color de texto del  párrafo de &lt;header&gt; ya que están en elementos completamente diferentes.</p>
+<p>¿Y que pasa si no aplicamos la primera regla sobre los h1? Pues que el encabezado de &lt;header&gt; no hereda esta regla, aunque en realidad si que hereda una, la regla genérica del navegador que estés utilizando, pero eso ya queda para un curso de CSS. Pulsa el botón para ver la página anterior sin regla general para &lt;h1&gt;.</p>
+      <button type="button" onClick='window.open("herencia2.html","_blank","width=640, height=480")'>Pulsa aquí</button>
+<p>Lo dicho,  en este caso tanto  los encabezados &lt;h1&gt; y los párrafos heredan  el color y el tamaño de texto especificados en las reglas aplicadas al elemento que los contiene, respectivamente &lt;header&gt; y &lt;article&gt;. </p>
+<p>Si ya sé que según lo anterior tanto los párrafos como los textos deberían tener el mismo tamaño en &lt;header&gt; o en &lt;article&gt;, y es evidente que esto no es así; pero esto es porque la propia etiqueta &lt;h1&gt; modifica el aspecto del texto. osea que aunque en &lt;header&gt; se aplique font-size=24px &lt;h1&gt; es mucho mayor, porque el tamaño de fuente de los encabezados es relativo a la font-size.</p>
+<p>Por último habrás comprobado que el estilo inline de &lt;spam&gt; machaca a todos los demás.</p>
+<p>Bien, no se si he conseguido explicar este tema, pero por lo menos espero haberte transmitido la imperiosa necesidad de manejar cómodamente la herencia de estilos CSS, porque si no, ¡estás listo!</p>
+<h3>Atributos de estilo</h3>  
+<h4> Fuentes CSS</h4>
+<p>
+Algunas de las propiedades que se pueden definir para las fuentes de texto con CSS son:</p>
+<ul>
+  <li>La propiedad <strong>color</strong> indica el color del texto de un elemento HTML </li>
+  <li>La propiedad <strong>font-family</strong> indica la font que se utilizará.</li>
+  <li>Se utiliza <strong>font-size</strong> para indicar el tamaño del texto.</li>
+  <li>Con <strong>font-style</strong> se puede elegir si queremos el texto normal, en negrita, itálica, etc.</li>
+  <li><strong>text-align</strong> indica el tipo de justificación del texto; derecha, izquierda, centrado,..</li>
+  </ul>
+<p>En el siguiente ejemplo se va a aplicar la font verdana, con un tamaño del 300%, centrado y color azul a una cabecera h1, y de forma similar aplicaremos color rojo, font courier y tamaño del 160% a un párrafo de texto:</p>
+<pre class="code">&lt;!DOCTYPE HTML&gt;<br>&lt;HTML&gt;<br>&lt;head&gt;<br>&lt;meta charset=&quot;utf-8&quot;&gt;<br>&lt;style&gt;<br>   h1 {<br>       font-family:verdana;<br>       font-size:300%;<br>		text-align: center;<br>		color: #0000FF;<br>   }<br>   p {<br>		color: #FF0000;<br>		font-family: courier;<br>		font-size:160%;<br>	} <br>   &lt;/style&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br>     &lt;h1&gt;Esto es un encabezado azul, fuente Verdana y tamaño 300%&lt;/h1&gt;
+     &lt;p&gt;Esto es un párrafo color rojo, courier y tamaño 160%&lt;/p&gt;<br>&lt;/body&gt;<br>&lt;/HTML&gt;</pre>
+        <button type="button" onClick='window.open("ejemploEstilo1.html","_blank","width=640, height=480")'>Compruébalo</button>
+
+<h3>El modelo de cajas de CSS</h3> 
+      
+    <p>
+    Como ya vimos en el capitulo de <a href="../00intro/intro.html" target="_blank">introducción</a>, cada 
+    elemento HTML visible está contenido dentro de una caja aunque normalmente no pueda verse. Para poder visualizar esta caja se puede utilizar el atributo <strong>border</strong> para dibujar una línea alrededor del elemento. A estas alturas he de suponer que ya estás introduciendo código en un editor y comprobando los resultados, así que prueba lo siguiente:</p>
+    <pre class="code">&lt;!DOCTYPE HTML&gt;<br>&lt;html&gt;<br>	&lt;head&gt;<br>		&lt;meta charset=&quot;UTF-8&quot; /&gt;<br>		&lt;title&gt;sample page&lt;/title&gt;<br>		&lt;style&gt;<br>			h1 {border:solid black;}<br>			p {border: dashed grey;}<br>		&lt;/style&gt;<br>	&lt;/head&gt;<br>	&lt;body&gt;<br>		&lt;h1&gt;Encabezado encuadrado&lt;/h1&gt;<br>		&lt;p&gt;Párrafo de texto encuadrado con una linea de guiones&lt;/p&gt;<br>	&lt;/body&gt;<br>&lt;/html&gt;</pre>
+            <button type="button" onClick='window.open("ejemploEstilo2.html","_blank","width=640, height=480")'>Compruébalo</button>
+
+    <p>Verás que el resultado es un encabezado enmarcado por una linea negra continua y a continuación 
+      un párrafo enmarcado por una linea de guiones gris. Esta es la caja que encierra los elementos HTML y que además tiene otros dos atributos importantes, el <strong>padding</strong> o espacio interior del borde que es el espacio que separa el borde de los elementos contenidos en la caja; y el <strong>margin</strong> o margen que es el espacio desde el borde de la caja hasta otros elementos contiguos del documento. Estos conceptos son otros para los que también es obligatorio comprender muy bien si luego queremos hacer correctamente el formato de la página. Veamos un ejemplo:</p>
+    <pre class="code">&lt;!DOCTYPE HTML&gt;<br>&lt;html&gt;<br>	&lt;head&gt;<br>		&lt;meta charset=&quot;UTF-8&quot; /&gt;<br>		&lt;title&gt;sample page&lt;/title&gt;<br>		&lt;style&gt;<br>			h1 {<br>				background-color:#c0c0c0;<br>				border:solid black;<br>				padding: 5px; margin: 10px;<br>			}<br>			p {<br>				background-color:#ffff80;<br>				border: dashed grey;<br>			}<br>		&lt;/style&gt;<br>	&lt;/head&gt;<br>	&lt;body&gt;<br>		&lt;h1&gt;Encabezado encuadrado&lt;/h1&gt;<br>		&lt;p style=&quot;padding: 5px; margin: 20px;&quot;&gt;Esto es un párrafo&lt;/p&gt;<br>		&lt;p style=&quot;padding: 10px; margin: 50px;&quot;&gt;Esto es otro parrafo con más margen
+ y padding&lt;/p&gt;<br>	&lt;/body&gt;<br>&lt;/html&gt;</pre>
+      <button type="button" onClick='window.open("ejemploEstilo3.html","_blank","width=640, height=480")'>Compruébalo</button>
+
+      <p>Como puede verse en el resultado del ejemplo anterior, el segundo párrafo es más ancho y esta más separado de los extremos de la página que el primero. Es importante entender que el tamaño de un elemento es la suma <strong>contenido+padding+border+margin</strong> donde el tamaño del contenido es el del texto, imagen u objeto que contenga, o si se ha definido su ancho y alto.</p>
+      <button type="button" onClick='window.open("ejemploEstilo4.html","_blank","width=640, height=480")'>Compruébalo</button>
+
+            
+    </article>
+	<!-- InstanceEndEditable -->
+    <h4><a href="#cabecera"><img src="../images/icono-arriba.gif" width="32" height="32"  alt=""/></a>      
+      Volver arriba</h4>
+    </main>
+<!--***********************BARRA LATERAL*********************************-->
+	<aside id="indice">
+       <iframe src="../contenidos.html"   height="900" width="200" frameborder="0"></iframe>
+    </aside>
+<!--************************PIE DE PAGINA*********************************-->
+    <footer>
+        &copy; Carlos Izquierdo Ferrando 2013
+    </footer>
+</div>
+</body>
+<!-- InstanceEnd --></html>
