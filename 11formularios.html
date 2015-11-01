@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Uso formularios</title>
+</head>
+<body>
+<form name="miform" id="miform" method="get">
+    <label>texto: </label><input type="text" name="texto" id="texto" autocomplete="off" required/><br/>
+    <label>password</label><input type="password" name="password" id="password"/><br/>
+    <label>Email</label><input type="email" name="mail" id="mail" placeholder="Introduce un correo válido" multiple/><br/>
+    <label>Url</label><input type="url" name="url" id="url"/><br/>
+    <label>tel</label><input type="tel" name="telefono" id="telefono"/><br/>
+    <label>number</label><input type="number" name="numero" id="numero" min="10" max="50" step="5"/><br/>
+    <label>range</label><input type="range" name="rango" id="rango" min="1" max="100" step="5"/><br/>
+    <label>date</label><input type="date" name="fecha" id="fecha"/><br/>
+    <label>week</label><input type="week" name="semana" id="semana" autofocus/><br/>
+    <label>month</label><input type="month" name="mes" id="mes"/><br/>
+    <label>time</label><input type="time" name="hora" id="hora"/><br/>
+    <label>datetime</label><input type="datetime" name="fechahora" id="fechahora"/><br/>
+    <label>pattern</label><input pattern="[0-9]{5}" name="cpostal" id="cpostal"/><br/>
+    <input type="submit"/>
+</form>
+<br/>
+<!-- Campo de formulario fuera del formulario
+Se consigue añadiendo la propiedad form en el campo-->
+
+Otro campo: <input type="text" placeholder="Campo externo al formulario" name="campoext" id="campoext" form="miform"/>
+
+</body>
+</html>
