@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Uso de formularios II</title>
+    <title>Uso de formularios III</title>
     <style>
         header>p{
             font-size: 22px;
@@ -11,17 +11,15 @@
     <script>
         var edad;
         function comenzar(){
-            edad=document.getElementById("edad";
-            edad.addEventListener("change",cambiaRango,false);
+            edad=document.getElementById("edad");
+            //edad.addEventListener("change",cambiaRango,false);
 
             document.datosusuario.addEventListener("invalid",validar,true);
 
             document.getElementById("enviar").addEventListener("click",enviar, false);
         }
 
-        function cambiaRango(){
-            document.getElementById("rango").innerHTML(edad.value);
-        }
+
 
         function validar(){
 
@@ -53,10 +51,10 @@
             </tr>
             <tr>
                 <td>Edad</td>
-                <td><input type="range" name="edad" id="edad" min="18" max="100" value="50" ></td>
+                <td><input type="range" name="edad" id="edad" min="1" max="100"  value="50"></td>
             </tr>
             <tr>
-                <td><output id="rango">50</output> </td>
+                <td><output for="edad">50</output> </td>
             </tr>
             <tr>
                 <td><input type="submit" id="enviar">
