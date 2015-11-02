@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Uso de formularios II</title>
+    <style>
+        header>p{
+            font-size: 22px;
+        }
+    </style>
+    <script>
+        var edad;
+        function comenzar(){
+            edad=document.getElementById("edad";
+            edad.addEventListener("change",cambiaRango,false);
+
+            document.datosusuario.addEventListener("invalid",validar,true);
+
+            document.getElementById("enviar").addEventListener("click",enviar, false);
+        }
+
+        function cambiaRango(){
+            document.getElementById("rango").innerHTML(edad.value);
+        }
+
+        function validar(){
+
+        }
+
+        function enviar(){
+
+        }
+        window.addEventListener("load",comenzar,false);
+    </script>
+</head>
+<body>
+<header>
+    <h1>Uso de Formularios II</h1>
+    <p>Más de la API Forms</p>
+</header>
+<section>
+
+    <h2>Segundo formulario</h2>
+    <form name="datosusuario" method="get">
+        <table>
+            <tr>
+                <td>Nombre</td>
+                <td><input type="text" name="nombre" id="nombre"></td>
+            </tr>
+            <tr>
+                <td>Apellido</td>
+                <td><input type="text" name="apellido" id="apellido"></td>
+            </tr>
+            <tr>
+                <td>Edad</td>
+                <td><input type="range" name="edad" id="edad" min="18" max="100" value="50" ></td>
+            </tr>
+            <tr>
+                <td><output id="rango">50</output> </td>
+            </tr>
+            <tr>
+                <td><input type="submit" id="enviar">
+                <td></td>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</section>
+
+</body>
+</html>
