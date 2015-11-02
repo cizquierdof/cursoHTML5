@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Uso de formularios II</title>
+    <style>
+        header>p{
+            font-size: 22px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Uso de Formularios II</h1>
+    <p>Datalist y elementos de al API Forms</p>
+</header>
+<section>
+    <h2>Primer formulario</h2>
+    <form name="usodatalist" method="get" id="usodatalist">
+        <datalist id="info">
+            <option value="913584652" label="   Información"></option>
+            <option value="935546879" label="   Emergencias"></option>
+            <option value="963427821" label="   Bomberos"></option>
+            <option value="913354566" label="   Policía"></option>
+        </datalist>
+        Teléfono: <input type="tel" id="telefono" name="telefono" list="info"/><br/>
+
+    </form>
+    <h2>Segundo formulario</h2>
+    <form id="datosusuario" method="get">
+        <table>
+            <tr>
+                <td>Nombre</td>
+                <td><input type="text" name="nombre" id="nombre"></td>
+            </tr>
+            <tr>
+                <td>Apellido</td>
+                <td><input type="text" name="apellido" id="apellido"></td>
+            </tr>
+            <tr>
+                <td>Edad</td>
+                <td><input type="number" name="" id="" min="18" max="100"></td>
+            </tr>
+            <tr>
+                <td><input type="submit">
+                <td></td>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</section>
+
+</body>
+</html>
