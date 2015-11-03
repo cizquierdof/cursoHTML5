@@ -6,31 +6,38 @@
     <style>
         header>p{
             font-size: 22px;
+
+        }
+        input:invalid{
+            background: firebrick;
         }
     </style>
+    <script src="js/jquery-2.1.4.js"></script>
     <script>
         var edad;
-        function comenzar(){
-            edad=document.getElementById("edad";
-            edad.addEventListener("change",cambiaRango,false);
+        $(function(){
+            $("#edad").on("input",function(){
+                $("#rango").html($("#edad").value());
+            });
+            $("#datosusuario").on("invalid",function(e){
+                var elemento= e.target;
+                elemento.style.background="#ffaaaa";
+            });
+            $("#enviar").click(enviar());
+        });
 
-            document.datosusuario.addEventListener("invalid",validar,true);
+        /*function cambiaRango(){
+            $("#rango").innerHTML="hola";
+        }*/
 
-            document.getElementById("enviar").addEventListener("click",enviar, false);
-        }
-
-        function cambiaRango(){
-            document.getElementById("rango").innerHTML(edad.value);
-        }
-
-        function validar(){
+        function validar(e){
 
         }
 
         function enviar(){
+            var correcto=document.datosusuario.ch
 
         }
-        window.addEventListener("load",comenzar,false);
     </script>
 </head>
 <body>
@@ -45,11 +52,11 @@
         <table>
             <tr>
                 <td>Nombre</td>
-                <td><input type="text" name="nombre" id="nombre"></td>
+                <td><input type="text" name="nombre" id="nombre" required></td>
             </tr>
             <tr>
                 <td>Apellido</td>
-                <td><input type="text" name="apellido" id="apellido"></td>
+                <td><input type="email" name="correo" id="correo" required></td>
             </tr>
             <tr>
                 <td>Edad</td>
